@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   ),
                   const SizedBox(height: 20),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: const <Widget>[
                       HomeCTA(
                         width: 150,
@@ -61,7 +61,6 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                      SizedBox(width: 20),
                       HomeCTA(
                         width: 150,
                         height: 150,
@@ -78,10 +77,78 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 24,
                   ),
-                  const HomeCTA(
+                  HomeCTA(
                     width: double.infinity,
-                    height: 150,
-                    child: Text("wagwan"),
+                    height: 200,
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          top: 24.0, right: 22.0, left: 22.0, bottom: 10.0),
+                      child: Column(
+                        children: <Widget>[
+                          const SizedBox(
+                            height: 5.0,
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const <Widget>[
+                              ReuseText(
+                                text: "Active passengers",
+                                size: 16,
+                              ),
+                              ReuseText(
+                                text: "08",
+                                size: 16,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 10),
+                          const Divider(
+                            color: Colors.grey,
+                            height: 0.8,
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const <Widget>[
+                              ReuseText(
+                                text: "Passengers today",
+                                size: 16,
+                              ),
+                              ReuseText(
+                                text: "104",
+                                size: 16,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 6),
+                          const Divider(
+                            color: Colors.grey,
+                            height: 0.8,
+                          ),
+                          const SizedBox(height: 20),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: const <Widget>[
+                              ReuseText(
+                                text: "Collections Today",
+                                size: 16,
+                                fWeight: FontWeight.bold,
+                              ),
+                              ReuseText(
+                                text: "208,000",
+                                size: 16,
+                                fWeight: FontWeight.bold,
+                              ),
+                            ],
+                          ),
+                          const SizedBox(height: 12),
+                          const Divider(
+                            color: Colors.grey,
+                            height: 0.6,
+                          ),
+                        ],
+                      ),
+                    ),
                   ),
                 ],
               ),
@@ -107,29 +174,30 @@ class HomeCTA extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        // padding: const EdgeInsets.all(16.0),
-        width: width,
-        height: height,
-        decoration: BoxDecoration(
-          // border: const Border(
-          //   top: BorderSide(color: Colors.white, width: 1.0),
-          //   left: BorderSide(color: Colors.white, width: 1.0),
-          // ),
-          color: const Color(0xffF6F2EE),
-          border: Border.all(color: Colors.white, width: 1.0),
-          borderRadius: BorderRadius.circular(14),
-          boxShadow: const [
-            BoxShadow(
-              color: Color.fromARGB(94, 158, 158, 158),
-              blurRadius: 16.0, // soften the shadow
-              spreadRadius: 0.08, //extend the shadow
-              offset: Offset(
-                0.0, // Move to right 5
-                3.0, // Move to bottom 5
-              ),
+      // padding: const EdgeInsets.all(16.0),
+      width: width,
+      height: height,
+      decoration: BoxDecoration(
+        // border: const Border(
+        //   top: BorderSide(color: Colors.white, width: 1.0),
+        //   left: BorderSide(color: Colors.white, width: 1.0),
+        // ),
+        color: const Color(0xffF6F2EE),
+        border: Border.all(color: Colors.white, width: 1.0),
+        borderRadius: BorderRadius.circular(14),
+        boxShadow: const [
+          BoxShadow(
+            color: Color.fromARGB(94, 158, 158, 158),
+            blurRadius: 16.0, // soften the shadow
+            spreadRadius: 0.08, //extend the shadow
+            offset: Offset(
+              0.0, // Move to right 5
+              3.0, // Move to bottom 5
             ),
-          ],
-        ),
-        child: child);
+          ),
+        ],
+      ),
+      child: Center(child: child),
+    );
   }
 }
