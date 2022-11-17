@@ -45,15 +45,29 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(height: 20),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: const <Widget>[
+                    children: <Widget>[
                       HomeCTA(
                         width: 150,
                         height: 150,
                         child: Center(
-                          child: ReuseText(
-                            text: "Start a Trip",
-                            fWeight: FontWeight.bold,
-                            size: 16,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 10.0),
+                                child: Icon(
+                                  Icons.qr_code_scanner_outlined,
+                                  size: 50,
+                                  color: Colors.green,
+                                ),
+                              ),
+                              ReuseText(
+                                text: "Scan",
+                                fWeight: FontWeight.bold,
+                                size: 16,
+                                color: Colors.green,
+                              ),
+                            ],
                           ),
                         ),
                       ),
@@ -61,10 +75,24 @@ class _HomeScreenState extends State<HomeScreen> {
                         width: 150,
                         height: 150,
                         child: Center(
-                          child: ReuseText(
-                            text: "End a Trip",
-                            fWeight: FontWeight.bold,
-                            size: 16,
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: const <Widget>[
+                              Padding(
+                                padding: EdgeInsets.only(bottom: 10.0),
+                                child: Icon(
+                                  Icons.groups_outlined,
+                                  size: 50,
+                                  color: Colors.red,
+                                ),
+                              ),
+                              ReuseText(
+                                text: "Passengers",
+                                fWeight: FontWeight.bold,
+                                size: 16,
+                                color: Colors.red,
+                              ),
+                            ],
                           ),
                         ),
                       ),
