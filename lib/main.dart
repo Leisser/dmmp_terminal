@@ -1,5 +1,6 @@
 import 'package:dmmp_terminal/views/home_screen.dart';
 import 'package:dmmp_terminal/views/passenger_screen.dart';
+import 'package:dmmp_terminal/views/passenger_trip_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
@@ -38,7 +39,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PassengerScreen(),
+      home: const PassengerTripScreen(),
       // home: const SignInPage(),
     );
   }

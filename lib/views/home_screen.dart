@@ -1,5 +1,6 @@
 import 'package:dmmp_terminal/utils/reusables/reusableText.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,10 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: SingleChildScrollView(
           child: Container(
-            padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 35),
+            padding: EdgeInsets.symmetric(
+                vertical: 0,
+                horizontal:
+                    (MediaQuery.of(context).size.height * .044).ceilToDouble()),
             decoration: BoxDecoration(
                 gradient: LinearGradient(
               begin: Alignment.topLeft,
@@ -28,43 +32,62 @@ class _HomeScreenState extends State<HomeScreen> {
             height: MediaQuery.of(context).size.height * 1,
             width: MediaQuery.of(context).size.width * 1,
             child: Padding(
-              padding: const EdgeInsets.only(top: 30.0),
+              padding: EdgeInsets.only(
+                  top: (MediaQuery.of(context).size.height * .038)
+                      .ceilToDouble()),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  const ReuseText(
+                  ReuseText(
                     text: "Taxi number UBH 827V",
                     fWeight: FontWeight.bold,
-                    size: 24,
+                    size: (MediaQuery.of(context).size.height * .030)
+                        .ceilToDouble(),
                   ),
-                  const SizedBox(height: 10),
-                  const ReuseText(
+                  SizedBox(
+                      height: (MediaQuery.of(context).size.height * .012)
+                          .ceilToDouble()),
+                  ReuseText(
                     text: "Hi James",
-                    size: 16,
+                    size: (MediaQuery.of(context).size.height * .02041)
+                        .ceilToDouble(),
                   ),
-                  const SizedBox(height: 20),
+                  SizedBox(
+                    height: (MediaQuery.of(context).size.height * .025)
+                        .ceilToDouble(),
+                  ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
                       HomeCTA(
-                        width: 150,
-                        height: 150,
+                        width: (MediaQuery.of(context).size.height * .192)
+                            .ceilToDouble(),
+                        height: (MediaQuery.of(context).size.height * .192)
+                            .ceilToDouble(),
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget>[
+                            children: <Widget>[
                               Padding(
-                                padding: EdgeInsets.only(bottom: 10.0),
+                                padding: EdgeInsets.only(
+                                    bottom:
+                                        (MediaQuery.of(context).size.height *
+                                                .012)
+                                            .ceilToDouble()),
                                 child: Icon(
                                   Icons.qr_code_scanner_outlined,
-                                  size: 50,
+                                  size: (MediaQuery.of(context).size.height *
+                                          .063)
+                                      .ceilToDouble(),
                                   color: Colors.green,
                                 ),
                               ),
                               ReuseText(
                                 text: "Scan",
                                 fWeight: FontWeight.bold,
-                                size: 16,
+                                size: (MediaQuery.of(context).size.height *
+                                        .02041)
+                                    .ceilToDouble(),
                                 color: Colors.green,
                               ),
                             ],
@@ -72,24 +95,34 @@ class _HomeScreenState extends State<HomeScreen> {
                         ),
                       ),
                       HomeCTA(
-                        width: 150,
-                        height: 150,
+                        width: (MediaQuery.of(context).size.height * .192)
+                            .ceilToDouble(),
+                        height: (MediaQuery.of(context).size.height * .192)
+                            .ceilToDouble(),
                         child: Center(
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.center,
-                            children: const <Widget>[
+                            children: <Widget>[
                               Padding(
-                                padding: EdgeInsets.only(bottom: 10.0),
+                                padding: EdgeInsets.only(
+                                    bottom:
+                                        (MediaQuery.of(context).size.height *
+                                                .012)
+                                            .ceilToDouble()),
                                 child: Icon(
                                   Icons.groups_outlined,
-                                  size: 50,
+                                  size: (MediaQuery.of(context).size.height *
+                                          .063)
+                                      .ceilToDouble(),
                                   color: Colors.red,
                                 ),
                               ),
                               ReuseText(
                                 text: "Passengers",
                                 fWeight: FontWeight.bold,
-                                size: 16,
+                                size: (MediaQuery.of(context).size.height *
+                                        .02041)
+                                    .ceilToDouble(),
                                 color: Colors.red,
                               ),
                             ],
@@ -98,79 +131,123 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 24,
+                  SizedBox(
+                    height: (MediaQuery.of(context).size.height * .030)
+                        .ceilToDouble(),
                   ),
                   HomeCTA(
                     width: double.infinity,
-                    height: 200,
-                    child: Padding(
-                      padding: const EdgeInsets.only(
-                          top: 24.0, right: 22.0, left: 22.0, bottom: 10.0),
-                      child: Column(
-                        children: <Widget>[
-                          const SizedBox(
-                            height: 5.0,
-                          ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const <Widget>[
-                              ReuseText(
-                                text: "Active passengers",
-                                size: 16,
-                              ),
-                              ReuseText(
-                                text: "08",
-                                size: 16,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 10),
-                          const Divider(
-                            color: Colors.grey,
-                            height: 0.8,
-                          ),
-                          const SizedBox(height: 20),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const <Widget>[
-                              ReuseText(
-                                text: "Passengers today",
-                                size: 16,
-                              ),
-                              ReuseText(
-                                text: "104",
-                                size: 16,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 6),
-                          const Divider(
-                            color: Colors.grey,
-                            height: 0.8,
-                          ),
-                          const SizedBox(height: 20),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: const <Widget>[
-                              ReuseText(
-                                text: "Collections Today",
-                                size: 16,
-                                fWeight: FontWeight.bold,
-                              ),
-                              ReuseText(
-                                text: "208,000",
-                                size: 16,
-                                fWeight: FontWeight.bold,
-                              ),
-                            ],
-                          ),
-                          const SizedBox(height: 12),
-                          const Divider(
-                            color: Colors.grey,
-                            height: 0.6,
-                          ),
-                        ],
+                    height: (MediaQuery.of(context).size.height * .255)
+                        .ceilToDouble(),
+                    child: Center(
+                      child: Padding(
+                        padding: EdgeInsets.only(
+                            top: (MediaQuery.of(context).size.height * .030)
+                                .ceilToDouble(),
+                            right: (MediaQuery.of(context).size.height * .028)
+                                .ceilToDouble(),
+                            left: (MediaQuery.of(context).size.height * .028)
+                                .ceilToDouble(),
+                            bottom: (MediaQuery.of(context).size.height * .012)
+                                .ceilToDouble()),
+                        child: Column(
+                          children: <Widget>[
+                            const SizedBox(
+                              height: 5.0,
+                            ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                ReuseText(
+                                  text: "Active passengers",
+                                  size: (MediaQuery.of(context).size.height *
+                                          .02041)
+                                      .ceilToDouble(),
+                                ),
+                                ReuseText(
+                                  text: "08",
+                                  size: (MediaQuery.of(context).size.height *
+                                          .02041)
+                                      .ceilToDouble(),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                                height:
+                                    (MediaQuery.of(context).size.height * .012)
+                                        .ceilToDouble()),
+                            Divider(
+                              color: Colors.grey,
+                              height:
+                                  (MediaQuery.of(context).size.height * .00099)
+                                      .toPrecision(1),
+                            ),
+                            SizedBox(
+                                height:
+                                    (MediaQuery.of(context).size.height * .025)
+                                        .ceilToDouble()),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                ReuseText(
+                                  text: "Passengers today",
+                                  size: (MediaQuery.of(context).size.height *
+                                          .02041)
+                                      .ceilToDouble(),
+                                ),
+                                ReuseText(
+                                  text: "104",
+                                  size: (MediaQuery.of(context).size.height *
+                                          .02041)
+                                      .ceilToDouble(),
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                                height:
+                                    (MediaQuery.of(context).size.height * .007)
+                                        .ceilToDouble()),
+                            Divider(
+                              color: Colors.grey,
+                              height:
+                                  (MediaQuery.of(context).size.height * .00099)
+                                      .toPrecision(1),
+                            ),
+                            SizedBox(
+                                height:
+                                    (MediaQuery.of(context).size.height * .025)
+                                        .ceilToDouble()),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: <Widget>[
+                                ReuseText(
+                                  text: "Collections Today",
+                                  size: (MediaQuery.of(context).size.height *
+                                          .02041)
+                                      .ceilToDouble(),
+                                  fWeight: FontWeight.bold,
+                                ),
+                                ReuseText(
+                                  text: "208,000",
+                                  size: (MediaQuery.of(context).size.height *
+                                          .02041)
+                                      .ceilToDouble(),
+                                  fWeight: FontWeight.bold,
+                                ),
+                              ],
+                            ),
+                            SizedBox(
+                                height:
+                                    (MediaQuery.of(context).size.height * .015)
+                                        .ceilToDouble()),
+                            Divider(
+                              color: Colors.grey,
+                              height:
+                                  (MediaQuery.of(context).size.height * .00071)
+                                      .toPrecision(1),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                   ),
@@ -221,7 +298,7 @@ class HomeCTA extends StatelessWidget {
           ),
         ],
       ),
-      child: Center(child: child),
+      child: child,
     );
   }
 }

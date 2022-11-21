@@ -48,4 +48,19 @@ class Dimensions {
 // bottom height
   static double bottomHeightBar = screenHeight / 7.03; // 120
 
+// new size
+  static double size6 = .007;
+  static double size10 = .012;
+  static double size12 = .015;
+  static double size16 = .02041;
+  static double size14 = .017;
+  static double size20 = .025;
+  static double size22 = .028;
+  static double size24 = .025;
+  static double size30 = .038;
+  static double size35 = .044;
+  static double size40 = .051;
+  static double size50 = .063;
+  static double size150 = .192;
+  static double size200 = .255;
 }
