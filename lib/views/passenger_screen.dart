@@ -18,7 +18,7 @@ class _PassengerScreenState extends State<PassengerScreen> {
       child: Scaffold(
           body: SingleChildScrollView(
         child: Container(
-          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 35),
+          padding: const EdgeInsets.symmetric(vertical: 0, horizontal: 0),
           decoration: BoxDecoration(
               gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -32,29 +32,36 @@ class _PassengerScreenState extends State<PassengerScreen> {
           width: MediaQuery.of(context).size.width * 1,
           child: Column(
             children: [
+              const SizedBox(
+                height: 20,
+              ),
               const Center(
-                child: Text("Passenger"),
+                child: ReuseText(
+                  text: "Passengers",
+                  fWeight: FontWeight.bold,
+                  size: 24,
+                ),
               ),
               DataTable(columns: const [
                 DataColumn(
                   label: ReuseText(
                     text: "Passenger",
                     fWeight: FontWeight.bold,
-                    size: 24,
+                    size: 16,
                   ),
                 ),
                 DataColumn(
                   label: ReuseText(
                     text: "Boarded",
                     fWeight: FontWeight.bold,
-                    size: 24,
+                    size: 16,
                   ),
                 ),
                 DataColumn(
                   label: ReuseText(
                     text: "Status",
                     fWeight: FontWeight.bold,
-                    size: 24,
+                    size: 16,
                   ),
                 ),
               ], rows: const [
@@ -63,16 +70,19 @@ class _PassengerScreenState extends State<PassengerScreen> {
                     DataCell(
                       ReuseText(
                         text: "0123456789",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Wandegeya",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Onboard",
+                        size: 14,
                       ),
                     ),
                   ],
@@ -82,16 +92,19 @@ class _PassengerScreenState extends State<PassengerScreen> {
                     DataCell(
                       ReuseText(
                         text: "0123456789",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Wandegeya",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Onboard",
+                        size: 14,
                       ),
                     ),
                   ],
@@ -101,16 +114,19 @@ class _PassengerScreenState extends State<PassengerScreen> {
                     DataCell(
                       ReuseText(
                         text: "0223456789",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Wandegeya",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Onboard",
+                        size: 14,
                       ),
                     ),
                   ],
@@ -120,16 +136,19 @@ class _PassengerScreenState extends State<PassengerScreen> {
                     DataCell(
                       ReuseText(
                         text: "0323456789",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
                         text: "Wandegeya",
+                        size: 14,
                       ),
                     ),
                     DataCell(
                       ReuseText(
-                        text: "Onff",
+                        text: "Off",
+                        size: 14,
                       ),
                     ),
                   ],
